@@ -12,14 +12,14 @@ Inspired by [@emilyadavis303](https://github.com/emilyadavis303)'s [rampaging-ra
 
 | Zombie | Mandate |
 |---|---|
-| **Shambler** | Clarity — naming, nesting depth, implicit contracts, single responsibility |
-| **Brainz** | Correctness — execution paths, guard conditions, side effects |
-| **The Rot** | TypeScript hygiene — `any`, non-null assertions, barrel exports, callback optionals |
-| **Gnasher** | Tests — coverage of logic-heavy code, assertion quality, test-utils conventions |
-| **The Undertaker** | Architecture — coupling, blast radius, downstream callers, precedent |
-| **Lurch** | Pattern adherence — framework conventions, loaded doc patterns, microtexts |
-| **The Watcher** | PR description vs diff alignment — does the PR do what it claims? |
-| **The Horde Mother** | Merge agent — deduplicates, verifies against the diff, enforces brevity |
+| 🧟 **Shambler** | Clarity — naming, nesting depth, implicit contracts, single responsibility |
+| 🧠 **Brainz** | Correctness — execution paths, guard conditions, side effects |
+| 🦠 **The Rot** | TypeScript hygiene — `any`, non-null assertions, barrel exports, callback optionals |
+| 🦷 **Gnasher** | Tests — coverage of logic-heavy code, assertion quality, test-utils conventions |
+| ⚰️ **The Undertaker** | Architecture — coupling, blast radius, downstream callers, precedent |
+| 📜 **Lurch** | Pattern adherence — framework conventions, loaded doc patterns, microtexts |
+| 👁️ **The Watcher** | PR description vs diff alignment — does the PR do what it claims? |
+| 👑 **The Horde Mother** | Merge agent — deduplicates, verifies against the diff, enforces brevity |
 
 ---
 
