@@ -225,7 +225,21 @@ Ask: "Have you tested? Let me know when you're ready."
 Ask: "How would you like to submit? My suggested verdict was [verdict].
 1: Approve  2: Approve with suggestions  3: Request changes  4: Comment only"
 
-Post using `gh api repos/<repo>/pulls/<PR_NUM>/reviews` with method POST:
+Post using `gh api repos/<repo>/pulls/<PR_NUM>/reviews` with method POST. **Always write the request body to a temp JSON file and use `--input`** — passing `comments` via `--field` treats the array as a literal string and causes a 422:
+
+```bash
+cat > /tmp/review-<PR>.json << 'EOF'
+{
+  "body": "...",
+  "event": "REQUEST_CHANGES",
+  "comments": [
+    { "path": "src/...", "line": 42, "side": "RIGHT", "body": "..." }
+  ]
+}
+EOF
+gh api repos/<repo>/pulls/<PR>/reviews --method POST --input /tmp/review-<PR>.json --jq '.id'
+```
+
 - `"body"`: one or two sentence summary — not the full analysis
 - `"event"`: `"APPROVE"`, `"REQUEST_CHANGES"`, or `"COMMENT"`
 - `"comments"`: array of approved inline comments, each with `"path"`, `"line"`, `"side": "RIGHT"`, `"body"`
