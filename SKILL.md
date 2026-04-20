@@ -1,6 +1,6 @@
 ---
 name: review-pr
-description: Review a pull request in depth using the Review Horde — parallel specialist zombie agents that cover clarity, correctness, TypeScript hygiene, tests, architecture, pattern adherence, and PR alignment — then post a single consolidated GitHub review. Use this skill whenever the user mentions a PR number, asks you to review code or a pull request, says things like "look at PR 1234", "can you review this", "what do you think of this PR", "review 1234", or wants feedback on a pull request. Also use it when the user says things like "re-review PR", "check if the issues on PR are resolved", "follow up on PR", "did they fix the comments on PR", "any updates on PR", or wants to see if a previously reviewed PR is ready to approve. Also use when the user says "mirror" or wants a self-review of their own code before pushing. Even if the user just drops a number and you suspect it's a PR, use this skill.
+description: Review a pull request using the Review Horde — parallel specialist zombie agents. Use when the user says "review", "re-review", or "mirror" followed by a PR number (e.g. "mirror 1641", "re-review 1234"). "mirror" = self-review before teammates see it; "re-review" = check if prior issues were fixed; default = full review that posts to GitHub. Also use when the user says things like "look at PR 1234", "can you review this", "check if the issues on PR are resolved", "follow up on PR", or drops a bare number that looks like a PR.
 argument-hint: <PR number> [re-review] [mirror]
 ---
 
