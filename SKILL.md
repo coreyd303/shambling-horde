@@ -21,10 +21,10 @@ Repo:
 !`gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null`
 
 PR metadata:
-!`echo "$ARGUMENTS" | grep -oE '[0-9]+' | head -1 | xargs -I{} gh pr view {} 2>&1`
+!`gh pr view "$(echo "$ARGUMENTS" | grep -oE '[0-9]+' | head -1)" 2>&1`
 
 PR diff:
-!`echo "$ARGUMENTS" | grep -oE '[0-9]+' | head -1 | xargs -I{} gh pr diff {} 2>&1`
+!`gh pr diff "$(echo "$ARGUMENTS" | grep -oE '[0-9]+' | head -1)" 2>&1`
 
 ## Mode
 
